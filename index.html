@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- rainier v2.1.0 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rainier v2.1.0</title>
+<link rel="stylesheet" href="css/rainier.css">
+</head>
+<body>
+
+<div id="rainier-stage">
+  <canvas id="rainier-sky" class="three-sky"></canvas>
+  <canvas id="rainier-moon" class="three-moon"></canvas>
+  <canvas id="rainier-sun" class="three-sun"></canvas>
+  <div id="plx-far" class="plx"></div>
+  <canvas id="rainier-clouds" class="three-clouds"></canvas>
+  <canvas id="rainier-birds" class="life-canvas"></canvas>
+  <canvas id="rainier-river" class="three-river"></canvas>
+  <canvas id="rainier-precip" class="three-precip"></canvas>
+  <div id="plx-near" class="plx"></div>
+  <canvas id="rainier-wind" class="life-canvas"></canvas>
+</div>
+
+<div id="rainier-when"></div>
+
+<div id="rainier-ui">
+  <input id="rainier-time" type="range" min="0" max="1439" value="720">
+  <button data-m="Now">Now</button>
+  <button data-m="Dawn">Dawn</button>
+  <button data-m="Noon">Noon</button>
+  <button data-m="Dusk">Dusk</button>
+  <button data-m="Night">Night</button>
+  <label>cloud <input id="rainier-cover" type="range" min="0" max="100" value="45"></label>
+  <label>wind <input id="rainier-wind" type="range" min="0" max="25" value="4"></label>
+  <label>precip <input id="rainier-precip-amt" type="range" min="0" max="100" value="0"></label>
+  <label>fog <input id="rainier-fog" type="range" min="0" max="100" value="0"></label>
+  <label>temp <input id="rainier-temp" type="range" min="-10" max="25" value="8"></label>
+  <button data-p="Clear">Clear</button>
+  <button data-p="Mist">Mist</button>
+  <button data-p="Rain">Rain</button>
+  <button data-p="Sleet">Sleet</button>
+  <button data-p="Snow">Snow</button>
+  <button data-p="Hail">Hail</button>
+  <button data-p="Fog">Fog</button>
+  <button id="rainier-zap">Zap</button>
+  <button data-c="auto">Auto</button>
+  <span id="rainier-ver"></span>
+  <span id="rainier-wx"></span>
+  <span id="rainier-info"></span>
+</div>
+
+<script type="importmap">
+  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.185.0/build/three.module.js" } }
+</script>
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
